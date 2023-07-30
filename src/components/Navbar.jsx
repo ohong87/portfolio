@@ -1,47 +1,57 @@
 import React from 'react';
 import '../styles.scss';
-import github from '../images/github.png';
-import ig from '../images/instagram.png';
-import linkedin from '../images/linkedin.png';
 import pfp from '../images/pfp.jpeg';
-import twitter from '../images/twitter.png';
-import youtube from '../images/youtube.png';
-import { FaInstagram, FaGithubSquare, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { FaInstagram, FaGithubSquare, FaLinkedin, FaTwitter, FaYoutube, FaSpotify } from "react-icons/fa";
 
 
 function Navbar () {
+
     return (
         <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse">
-                    <a class="navbar-brand" href="#">
-                        <img src={pfp} width="30" height="24"/>
+                <div class="navbar-nav">
+                    <Link to="/" class="nav-brand" style={{
+                        display: "flex",
+                        "alignItems": "center",
+                        textDecoration: 'none',
+                        color: 'white',
+                        padding: '10px 1rem 10px 0px',
+                    }}>
+                        <img src={pfp} class="me-2" width="50" height="50" style={{"borderRadius":"50%"}}/>
                         Oscar Hong
-                    </a>
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="#">Photographer</a>
-                        <a class="nav-link" href="#">Developer</a>
-                        <a class="nav-link" href="#">Founder</a>
-                    </div>
+                    </Link>
+                    
+                    <Link class="nav-link" to="/photo">Photographer</Link>
+                    <Link class="nav-link" to="/projects">Developer</Link>
+                    <Link class="nav-link" to="/founder">Founder</Link>
+                    {/* <div class="navbar-nav">
+                        
+                    </div> */}
 
                 </div>
-                <div>
-                    <a class="navbar-brand" href="#">
-                        <FaGithubSquare icon="fa-brands fa-github-square" />
+                <div class="navbar-right-col">
+  
+                    <a class="navbar-brand" href="https://github.com/ohong87">
+                        <FaGithubSquare class="navbar-icon" icon="fa-brands fa-github-square" />
                     </a>
-                    <a class="navbar-brand" href="#">
-                        <FaLinkedin icon="fa-brands fa-linkedin" />
+                    <a class="navbar-brand" href="https://www.linkedin.com/in/oscar-hong/">
+                        <FaLinkedin class="navbar-icon" icon="fa-brands fa-linkedin" />
                     </a>
-                    <a class="navbar-brand" href="#">
-                        <FaInstagram icon="fa-brands fa-instagram" />
+                    <a class="navbar-brand" href="https://open.spotify.com/user/jkadw56dmh943cxku8r0hgap9?si=37cfdac009304cb5">
+                        <FaSpotify class="navbar-icon" icon="fa-brands fa-spotify" />
+                    </a>
+                    <a class="navbar-brand" href="https://www.instagram.com/oscar.hong/">
+                        <FaInstagram class="navbar-icon" icon="fa-brands fa-instagram" />
                     </a>
 
-                    <a class="navbar-brand" href="#">
-                        <FaTwitter icon="fa-brands fa-twitter" />
+                    <a class="navbar-brand" href="https://twitter.com/ohong87">
+                        <FaTwitter class="navbar-icon" icon="fa-brands fa-twitter" />
                     </a>
-                    <a class="navbar-brand" href="#">
-                        <FaYoutube icon="fa-brands fa-youtube" />
+                    <a class="navbar-brand" href="https://www.youtube.com/channel/UCYVyjrCq8145lU3jDqvrMhQ">
+                        <FaYoutube class="navbar-icon" icon="fa-brands fa-youtube" />
                     </a>
+                    
                 </div>
             </div>
         </nav>
