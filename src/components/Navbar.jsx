@@ -6,12 +6,11 @@ import { FaInstagram, FaGithubSquare, FaLinkedin, FaTwitter, FaYoutube, FaSpotif
 
 
 function Navbar () {
-
     return (
         <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
                 <div class="navbar-nav">
-                    <Link to="/" class="nav-brand" style={{
+                    <Link to="/portfolio" class="nav-brand" style={{
                         display: "flex",
                         "alignItems": "center",
                         textDecoration: 'none',
@@ -25,9 +24,6 @@ function Navbar () {
                     <Link class="nav-link" to="/photo">Photographer</Link>
                     <Link class="nav-link" to="/projects">Developer</Link>
                     <Link class="nav-link" to="/founder">Founder</Link>
-                    {/* <div class="navbar-nav">
-                        
-                    </div> */}
 
                 </div>
                 <div class="navbar-right-col">
