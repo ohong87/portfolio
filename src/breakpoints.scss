@@ -1,0 +1,39 @@
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap";
+
+$xsBreakpoint: 576px;
+$smBreakpoint: 768px;
+$mdBreakpoint: 1024px;
+$lgBreakpoint: 1400px;
+$xlBreakpoint: 1700px;
+
+@mixin xs-breakpoint {
+    @media only screen and (max-width: $xsBreakpoint){
+    @content
+    }
+    }
+    
+    @mixin sm-breakpoint {
+    @media only screen and (min-width: $smBreakpoint){
+    @content
+    }
+    }
+    
+    @mixin md-breakpoint {
+    @media only screen and (min-width: $mdBreakpoint){
+    @content
+    }
+    }
+    
+    @mixin lg-breakpoint {
+    @media only screen and (min-width: $lgBreakpoint){
+    @content
+    }
+    }
+    
+    @mixin xl-breakpoint {
+    @media only screen and (min-width: $xlBreakpoint){
+    @content
+    }
+    }

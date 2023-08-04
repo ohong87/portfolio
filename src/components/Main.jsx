@@ -1,20 +1,24 @@
 import '../styles.scss';
+import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
 
 import {Box, Grid, Item} from "@mui/material";
-// import { Center, Grid, GridItem, VStack } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-
-import Navbar from "./Navbar";
 import { TypeAnimation } from 'react-type-animation';
+
 import mainPhoto from "../images/mainPhoto.png";
-import styles from '../styles.scss';
+import headShot from "../images/pfp.jpeg";
+
 
 function Main() {
-    const bio = "I'm a senior studying CS + Business at USC. I'm extremely passionate about startups and am always looking for ways to explore the intersections of entrepreneurship and technology. I'm currently interning at IBM as a Technical Product Manger, building and shipping an experimental AI product under WatsonX. In my past, I cofounded an EdTech startup to help underprivileged high schoolers access internship opportunities, securing interest from almost every school district in New England and from organizations like the US Dept. of Energy. From my prior internship experiences, I've grown under C-suite executives at startups and Fortune 50s alike, with skills ranging between Product Management, Business Strategy, Market Analysis, and Design Thinking. On the technical side, I’m also experienced with designing, building, and shipping web applications from various school and personal projects. I've experience in front-end software development (React.js, HTML) and object oriented programming (C++, Java, Python)."
+    const bio1 = "I’ve been a builder for as long as I can remember will be for as far as I can tell. As of now, this has fueled my love for building and scaling products that have the potential to change the world."
+    const bio2 = "Currently, I’m a Technical Product Manger @ IBM using WatsonX to help IT customers automate their complex workflows. In the past, I’ve cofounded an EdTech startup that worked with D.O.E and NASA to offer underserved students with internship opportunities, and worked at places ranging between Series B companies and Fortune 50s doing product and software roles. "
+    const bio3 = "Outside of work, I also run a photography business, am trying to go viral on Spotify, and make awesome YouTube vlogs."
+    const bio4 = "This site was built with React.js and CSS Bootstrap"
+
     return (
         <div class="mx-0">
             <Navbar/>
-            <div class="mt-8 mx-6">
+            <div class="mt-8 mx-7">
                 <div class="row align-items-center gx-5">
                     <div class="col">
                         <h1 class="display-4">Hello World; I'm Oscar</h1>
@@ -61,16 +65,31 @@ function Main() {
                         </div>
                     </div>
                     <div class="col-5">
-                        <div class="card">
-                            <div class="card-front">
-                                <img src={mainPhoto} height="100%" width="90%" />
-                                <p class="">📸 @oscar.hong.photo | 📍 San Jose, CA</p>
-                            </div>                    
-                            {/* <div class="card-back">
-                                <img></img>
-                                <p>{bio}</p>
-                            </div> */}
+                        <div class="card border-0">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src={mainPhoto} alt='Oscar Hong' class="w-100 h-100"/>
+                                    <p class="">📸 @oscar.hong.photo | 📍 San Jose, CA</p>
+                                </div>                    
+                                <div class="card-back">
+                                    <img src={headShot} alt='Oscar Hong' class="w-25 rounded-circle"/>
+                                    <div class="text-start pt-4 fs-5 gx-0">
+                                        <p class="fs-6">{bio1}</p>
+                                        <p class="fs-6">{bio2}</p>
+                                        <p class="fs-6">{bio3}</p>
+                                        <p class="fs-6">Feel free to contact me: oscar.hong@usc.edu</p>
+                                        <hr/>
+                                        <div>🎓 CS + Business @ USC ‘24 </div>
+                                        <div>💼 TPM Intern @ IBM</div>
+                                        <div>📄 <a href="https://docs.google.com/document/d/1zVDS9380neRp4LYbL-DzKEF8LPDYfflp/edit?usp=sharing&ouid=113507540513874664396&rtpof=true&sd=true" class="text-primary">Resume</a></div>
+                                        <div>📍 (Currently) San Jose, CA</div>
+                                    </div>
+                                    <p class="fs-6 justify-content-center pt-4">{bio4}</p>
+
+                                </div>
+                            </div>
                         </div>
+                        
                         
                     </div>
                 </div>
@@ -81,146 +100,3 @@ function Main() {
     }
 
 export default Main;
-
-
-// const getReturnParamsFromSpotifyAuth = (hash)   => {
-//     console.log('here');
-//     const stringAfterHashtag = hash.substring(1);
-//     const paramsInUrl = stringAfterHashtag.split("&");
-//     const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
-//         console.log("currval here" + currentValue);
-//         const [key, value] = currentValue.split("=");
-//         accumulater[key] = value;
-//         return accumulater;
-//     }, {});
-//     console.log("haha" + paramsInUrl)
-//     return paramsSplitUp;
-// }
-
-// const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
-// const SCOPES = [
-//     "user-read-currently-playing",
-//     "user-read-playback-state"
-// ];
-
-// const REACT_APP_REDIRECT_URI_AFTER_LOGIN = "http://localhost:3000/portfolio"
-// const REDIRECT_URI = "http://localhost:3000/portfolio/callback"
-// const SCOPES_URL_PARAM = SCOPES.join("%20");
-// const CLIENT_ID = "35879252c9374392822218b00dad1011"
-
-    // // {/* <button onClick = {handleLogin}>
-    // //     click me
-    // // </button> */}
-    // // <button onClick={getNowPlayingItem} >
-    // //     also click me
-    // // </button>
-    //     // const CLIENT_ID = "35879252c9374392822218b00dad1011"
-    // // const SECRET_ID = "a6f09a84ec434d17ab30588bc358f98c"
-    // // const REDIRECT_URI = "http://localhost:3000/portfolio/callback"
-
-    // // var SpotifyWebApi = require('spotify-web-api-node');
-    // // const spotifyApi = new SpotifyWebApi({
-    // //     clientId: CLIENT_ID,
-    // //     clientSecret: SECRET_ID,
-    // //     redirectUri: REDIRECT_URI
-    // // })
-
-
-    // // var code = 'MQCbtKe23z7YzzS44KzZzZgjQa621hgSzHN';
-
-    // // // Retrieve an access token and a refresh token
-    // // spotifyApi.authorizationCodeGrant(code).then(
-    // //   function(data) {
-    // //     pe('The token expires in ' + data.body['expires_in']);
-    // //     console.log('The access token is ' + data.body['access_token']);
-    // //     console.log('The refresh token is ' + data.body['refresh_token']);
-    
-    // //     // Set the access token on the API object to use it in later calls
-    // //     spotifyApi.setAccessToken(data.body['access_token']);
-    // //     spotifyApi.setRefreshToken(data.body['refresh_token']);
-    // //   },
-    // //   function(err) {
-    // //     console.log('Something went wrong!', err);
-    // //   }
-    // // );
-
-    // var SpotifyWebApi = require('spotify-web-api-node');
-    // const spotifyApi = new SpotifyWebApi({
-    //     clientId: CLIENT_ID,
-    //     clientSecret: process.env.REACT_APP_SECRET_ID,
-    //     constRedirectUri: REDIRECT_URI
-    // })
-
-    // // const handleLogin = () => {
-    // //     window.location = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REACT_APP_REDIRECT_URI_AFTER_LOGIN}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`
-    // // }
-    
-    // const getNowPlayingItem = async() => {
-    //     console.log("the access token" + accessToken)
-    //     spotifyApi.setAccessToken(accessToken);
-
-    //     var nowPlaying = []
-
-    //     spotifyApi.getMyCurrentPlayingTrack()
-    //     .then(function(data) {
-    //         console.log("data" + data.body.item.show)
-    //       console.log('Now playing name: ' + data.body.item.name);
-    //       console.log('artist' + data.body.item.artists[0]);
-    //       console.log('album ' + data.body.item.album.name);
-    //       console.log('album image ' + data.body.item.album.images[0].url);
-    //       if (data.body.item.preview_url != null) {
-    //         nowPlaying.push(
-    //             <box>
-    //                 <list>
-    //                 <listItem>
-    //                 <text>
-    //                     {data.body.item.name}
-    //                 </text>
-    //                 </listItem>
-    //                 <listItem>
-    //                 <video>
-    //                     <source src={data.body.item.preview_url} type="video/mp4"/>
-    //                 </video>
-    //                 </listItem>
-    //                 <listItem>
-    //                 <image src={data.body.item.album.images[0].url}/>
-    //                 </listItem>
-
-    //                 </list>
-    //             </box>
-    //           )
-    //       }
-
-
-    
-
-    //       setNowPlayingItem(nowPlaying);
-
-    //     }, function(err) {
-    //       console.log('Something went wrong!', err);
-    //     });
-    //     console.log("fart")
-    // }
-
-    // const [nowPlayingItem, setNowPlayingItem] = useState([]);
-    // const [accessToken, setAccessToken] = useState("");
-
-    // useEffect(() => {
-    //     if (window.location.hash) {
-    //         const {access_token,
-    //         expire_in,
-    //         token_type,
-    //         }  = getReturnParamsFromSpotifyAuth(window.location.hash);
-    //         console.log("access token here" + access_token);
-    //         setAccessToken(access_token);
-    //         console.log("access token here" + accessToken.toString());
-    //     }}, [])
-
-    // // useEffect(() => {
-    // //     if (accessToken === "") {
-    // //         handleLogin();
-    // //     } 
-    // // })
-    //             <list>
-    // {nowPlayingItem}
-    // </list>
