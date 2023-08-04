@@ -1,5 +1,28 @@
+@import "~bootstrap/scss/functions";
+
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 8,
+  8: $spacer * 10,
+  9: $spacer * 12,
+  10: $spacer * 16,
+
+);
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap";
 
 $font-size: 40px;
+
 
 .navbar-icon{
     font-size: $font-size;
@@ -31,12 +54,16 @@ $font-size: 40px;
     font-size: $font-size/2;
 }
 
-.card-back, .card-front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
+// .card{
+//     perspective: 1000px;
+// }
+
+// .card-back, .card-front{
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     backface-visibility: hidden;
+// }
 
 .card-back{
     transform: rotateY(180deg);
@@ -44,12 +71,11 @@ $font-size: 40px;
 
 .card-rotate:hover{
     transform: rotateY(180deg);
-    transition: transform 0.8s;
+    // transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
 .card-rotate{
-    background-color: transparent;
     perspective: 1000px;
 }
 
@@ -58,6 +84,6 @@ $font-size: 40px;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    // transition: transform 0.8s;
     transform-style: preserve-3d;
 }

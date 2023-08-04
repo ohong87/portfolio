@@ -1,96 +1,81 @@
+import '../styles.scss';
+
+import {Box, Grid, Item} from "@mui/material";
+// import { Center, Grid, GridItem, VStack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 import Navbar from "./Navbar";
-import mainPhoto from "../images/mainPhoto.png";
 import { TypeAnimation } from 'react-type-animation';
-import Box from '@mui/material/Box';
-
-import '../styles.scss';
+import mainPhoto from "../images/mainPhoto.png";
 import styles from '../styles.scss';
-
 
 function Main() {
     const bio = "I'm a senior studying CS + Business at USC. I'm extremely passionate about startups and am always looking for ways to explore the intersections of entrepreneurship and technology. I'm currently interning at IBM as a Technical Product Manger, building and shipping an experimental AI product under WatsonX. In my past, I cofounded an EdTech startup to help underprivileged high schoolers access internship opportunities, securing interest from almost every school district in New England and from organizations like the US Dept. of Energy. From my prior internship experiences, I've grown under C-suite executives at startups and Fortune 50s alike, with skills ranging between Product Management, Business Strategy, Market Analysis, and Design Thinking. On the technical side, I’m also experienced with designing, building, and shipping web applications from various school and personal projects. I've experience in front-end software development (React.js, HTML) and object oriented programming (C++, Java, Python)."
     return (
-        <>
+        <div class="mx-0">
             <Navbar/>
-            <div class="container" style={{"marginTop":"10%", "padding":"0% 6%", "background":"#fff"}}>
-                <div class="row align-items-center">
+            <div class="mt-8 mx-6">
+                <div class="row align-items-center gx-5">
                     <div class="col">
-                        <div class="row">
-                            <div class="col"> 
-                                <h1 class="display-4">
-                                    Hello World; I'm Oscar</h1>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p class="main-bio"><em>
-                                <TypeAnimation
-                                sequence={[
-                                    "a senior @ USC studying CS + Business",
-                                    1000,
+                        <h1 class="display-4">Hello World; I'm Oscar</h1>
+                        <p class="fs-4 text-secondary"><em>
+                            <TypeAnimation asdf
+                            sequence={[
+                                "a senior @ USC studying CS + Business",
+                                1000,
 
-                                    "a product manager supercharging IT teams",
-                                    1000,
+                                "a product manager supercharging IT teams",
+                                1000,
 
-                                    'a founder building and growing crazy ideas',
-                                    1000,
+                                'a founder building and growing crazy ideas',
+                                1000,
 
-                                    'a vlogger documenting life’s adventures',
-                                    1000,
+                                'a vlogger documenting life’s adventures',
+                                1000,
 
-                                    "a photographer capturing future memories",
-                                    1000,
+                                "a photographer capturing future memories",
+                                1000,
 
-                                    "an aspiring Spotify content creator",
-                                    1000,
+                                "an aspiring Spotify content creator",
+                                1000,
 
-                                    "an (avid) aviation geek",
-                                    1000
-                                ]}
-                                speed={120}
-                                repeat={Infinity}
-                                />
-                            </em></p>
-                        </div>
-                        <div class="row justify-content-space-between" style={{"paddingTop":"10%"}}>
-                            <div class="col-4"><p class="h4">My Current Playlist:</p></div>
-                            <div class="col" style={{"marginRight":"5%"}}>
-                                <iframe 
-                                    style={{"border-radius":"12px"}} 
-                                    src="https://open.spotify.com/embed/playlist/7pHOoo7RfSSydqDkCA8WPh?utm_source=generator&theme=0" 
-                                    width="100%" 
-                                    height="152" 
-                                    frameBorder="0" 
-                                    allowfullscreen="" 
-                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                                    loading="lazy">
-                                </iframe>
-                            </div>
+                                "an (avid) aviation geek",
+                                1000
+                            ]}
+                            speed={120}
+                            repeat={Infinity}
+                            />
+                        </em></p>
+                        <div class="row justify-content-space-between pt-5">
+                            <p class="font-weight-light fs-4 text-secondary">My Current Playlist:</p>
+                            <iframe 
+                                style={{"border-radius":"12px"}} 
+                                src="https://open.spotify.com/embed/playlist/7pHOoo7RfSSydqDkCA8WPh?utm_source=generator&theme=0" 
+                                width="100%" 
+                                height="152" 
+                                frameBorder="0" 
+                                allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                loading="lazy">
+                            </iframe>
                         </div>
                     </div>
-                    <div class="col-4 " style={{"background":"black"}}>
-                        <div class="card-rotate">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <div class="row">
-                                        <img src={mainPhoto} height="100%" width="100%" />
-                                    </div>
-                                    <div class="row">
-                                        <p class="">📸 @oscar.hong.photo | 📍 San Jose, CA</p>
-                                    </div>
-                                </div>
-                                <div class="card-back">
-                                    <img></img>
-                                    <p>{bio}</p>
-                                </div>
-                            </div>
+                    <div class="col-5">
+                        <div class="card">
+                            <div class="card-front">
+                                <img src={mainPhoto} height="100%" width="90%" />
+                                <p class="">📸 @oscar.hong.photo | 📍 San Jose, CA</p>
+                            </div>                    
+                            {/* <div class="card-back">
+                                <img></img>
+                                <p>{bio}</p>
+                            </div> */}
                         </div>
                         
                     </div>
                 </div>
             </div>
-        </>
+        </div>
         
     );
     }

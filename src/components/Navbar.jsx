@@ -1,13 +1,14 @@
-import React from 'react';
 import '../styles.scss';
-import pfp from '../images/pfp.jpeg';
-import { Link } from 'react-router-dom';
-import { FaInstagram, FaGithubSquare, FaLinkedin, FaTwitter, FaYoutube, FaSpotify } from "react-icons/fa";
 
+import { FaGithubSquare, FaInstagram, FaLinkedin, FaSpotify, FaTwitter, FaYoutube } from "react-icons/fa";
+
+import { Link } from 'react-router-dom';
+import React from 'react';
+import pfp from '../images/pfp.jpeg';
 
 function Navbar () {
     return (
-        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
                 <div class="navbar-nav">
                     <Link to="/portfolio" class="nav-brand" style={{
