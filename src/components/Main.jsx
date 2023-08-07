@@ -10,10 +10,7 @@ import headShot from "../images/pfp.jpeg";
 
 
 function Main() {
-    const bio1 = "I’ve been a builder for as long as I can remember will be for as far as I can tell. As of now, this has fueled my love for building and scaling products that have the potential to change the world."
-    const bio2 = "Currently, I’m a Technical Product Manger @ IBM using WatsonX to help IT customers automate their complex workflows. In the past, I’ve cofounded an EdTech startup that worked with D.O.E and NASA to offer underserved students with internship opportunities, and worked at places ranging between Series B companies and Fortune 50s doing product and software roles. "
-    const bio3 = "Outside of work, I also run a photography business, am trying to go viral on Spotify, and make awesome YouTube vlogs."
-    const bio4 = "This site was built with React.js and CSS Bootstrap"
+    const bio = "I’ve been a builder for as long as I can remember will be for as far as I can tell. As of now, this has fueled my love for building and scaling products that have the potential to change the world.\nCurrently, I’m a Technical Product Manger @ IBM using WatsonX to help IT customers automate their complex workflows. In the past, I’ve cofounded an EdTech startup that worked with D.O.E and NASA to offer underserved students with internship opportunities, and worked at places ranging between Series B companies and Fortune 50s doing product and software roles.\nOutside of work, I also run a photography business, am trying to go viral on Spotify, and make awesome YouTube vlogs.\nThis site was built with React.js and CSS Bootstrap"
 
     return (
         <div class="mx-0">
@@ -74,17 +71,16 @@ function Main() {
                                 <div class="card-back">
                                     <img src={headShot} alt='Oscar Hong' class="w-25 rounded-circle"/>
                                     <div class="text-start pt-4 fs-5 gx-0">
-                                        <p class="fs-6">{bio1}</p>
-                                        <p class="fs-6">{bio2}</p>
-                                        <p class="fs-6">{bio3}</p>
-                                        <p class="fs-6">Feel free to contact me: oscar.hong@usc.edu</p>
+                                        <p class="fs-6">
+                                            {bio.split('\n').map((paragraph, index) => (<p key={index}>{paragraph}</p>))}
+                                        </p>
                                         <hr/>
                                         <div>🎓 CS + Business @ USC ‘24 </div>
                                         <div>💼 TPM Intern @ IBM</div>
                                         <div>📄 <a href="https://docs.google.com/document/d/1zVDS9380neRp4LYbL-DzKEF8LPDYfflp/edit?usp=sharing&ouid=113507540513874664396&rtpof=true&sd=true" class="text-primary">Resume</a></div>
                                         <div>📍 (Currently) San Jose, CA</div>
                                     </div>
-                                    <p class="fs-6 justify-content-center pt-4">{bio4}</p>
+                                    <p class="fs-6 justify-content-center pt-4">Feel free to contact me: oscar.hong@usc.edu</p>
 
                                 </div>
                             </div>

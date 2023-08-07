@@ -21,8 +21,14 @@ function Navbar () {
                         <img src={pfp} class="me-2" width="50" height="50" style={{"borderRadius":"50%"}}/>
                         Oscar Hong
                     </Link>
-                    
-                    <Link class="nav-link" to="/photo">Photographer</Link>
+                    <Link class="nav-link" to="/photo">
+                        Photographer
+                        {/* <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                            <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                            <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                        </ul> */}
+                    </Link>
                     <Link class="nav-link" to="/projects">Developer</Link>
                     <Link class="nav-link" to="/founder">Founder</Link>
 
