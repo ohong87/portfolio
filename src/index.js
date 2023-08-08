@@ -8,6 +8,10 @@ import Founder from './components/Founder';
 import Astro from './components/Astro';
 import Events from './components/Events';
 import Grad from './components/Grad';
+import Headshot from "./components/Headshot";
+import Landscapes from "./components/Landscapes";
+import Candid from "./components/Candid";
+import Film from "./components/Film";
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
@@ -21,6 +25,10 @@ export default function App() {
         <Route path="/photo/astro" element={<Astro/>} />
         <Route path="/photo/events" element={<Events/>} />
         <Route path="/photo/grad" element={<Grad/>} />
+        <Route path="/photo/headshot" element={<Headshot/>} />
+        <Route path="/photo/landscape" element={<Landscapes/>} />
+        <Route path="/photo/candid" element={<Candid/>} />
+        <Route path="/photo/film" element={<Film/>} />
         <Route path="/projects" element={<Projects/>} />
         <Route path="/founder" element={<Founder/>} />
         <Route path="*" element={"Page not found"} />

@@ -29,8 +29,8 @@ function Navbar () {
                             <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
                         </ul> */}
                     </Link>
-                    <Link class="nav-link" to="/projects">Developer</Link>
-                    <Link class="nav-link" to="/founder">Founder</Link>
+                    {/* <Link class="nav-link" to="/projects">Developer</Link>
+                    <Link class="nav-link" to="/founder">Founder</Link> */}
 
                 </div>
                 <div class="navbar-right-col">

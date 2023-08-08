@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import ReactPlayer from "react-player"
 
-import tii from "../images/TII.png"
+import tii from "../images/tii/TII.png"
 
 
 function Founder() {
