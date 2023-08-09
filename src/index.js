@@ -5,13 +5,13 @@ import Main from './components/Main';
 import Photo from './components/Photo';
 import Projects from './components/Projects';
 import Founder from './components/Founder';
-import Astro from './components/Astro';
-import Events from './components/Events';
-import Grad from './components/Grad';
-import Headshot from "./components/Headshot";
-import Landscapes from "./components/Landscapes";
-import Candid from "./components/Candid";
-import Film from "./components/Film";
+import Astro from './components/photo/Astro';
+import Events from './components/photo/Events';
+import Grad from './components/photo/Grad';
+import Headshot from "./components/photo/Headshot";
+import Landscapes from "./components/photo/Landscapes";
+import Candid from "./components/photo/Candid";
+import Film from "./components/photo/Film";
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 

@@ -11,12 +11,13 @@ function Navbar () {
         <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
             <div class="container-fluid">
                 <div class="navbar-nav">
-                    <Link to="/portfolio" class="nav-brand" style={{
+                    <Link to="/portfolio" class="nav-brand " style={{
                         display: "flex",
                         "alignItems": "center",
                         textDecoration: 'none',
                         color: 'white',
                         padding: '10px 1rem 10px 0px',
+                        marginTop: '-1px',
                     }}>
                         <img src={pfp} class="me-2" width="50" height="50" style={{"borderRadius":"50%"}}/>
                         Oscar Hong
