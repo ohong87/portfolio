@@ -168,26 +168,6 @@ function Film() {
         width: width,
         height: height}
     ]
-    // const filmList = [];
-    // const numberOfFilms = 22; // Adjust this based on the actual number of films
-
-    // for (let i = 1; i <= numberOfFilms; i++) {
-    //     filmList.push(`../../images/film/film${i}.jpeg`);
-    // }
-    // const photo = filmList.map((filmSrc) => ({
-    //     src: filmSrc, // Using ".default" due to CommonJS import behavior
-    //     width: width,
-    //     height: height
-    // }));
-    // console.log(photo)
-
-    // const photo = Object.keys(filmImages).map((key) => ({
-    //     src: filmImages[key].default,
-    //     width: width,
-    //     height: height,
-    // }));
-
-    
 
     return (
         <div div class="d-flex mx-0 mb-4">

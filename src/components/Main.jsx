@@ -77,8 +77,8 @@ function Main() {
                                         <hr/>
                                         <div>🎓 CS + Business @ USC ‘24 </div>
                                         <div>💼 TPM Intern @ IBM</div>
-                                        <div>📄 <a href="https://docs.google.com/document/d/1zVDS9380neRp4LYbL-DzKEF8LPDYfflp/edit?usp=sharing&ouid=113507540513874664396&rtpof=true&sd=true" class="text-primary">Resume</a></div>
-                                        <div>📍 (Currently) San Jose, CA</div>
+                                        <div>📄 <a href="https://docs.google.com/document/d/1dOtGv0vjoDiviTr4XjWeb2agnc4DQ6T4/edit?usp=sharing&ouid=100989920777328989705&rtpof=true&sd=true" class="text-primary">Resume</a></div>
+                                        <div>📍 (Currently) Hong Kong</div>
                                     </div>
                                     <p class="fs-6 justify-content-center pt-4">Feel free to contact me: oscar.hong@usc.edu</p>
 
